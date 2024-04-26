@@ -1,0 +1,43 @@
+public YandexSDK sdk;
+-------------------------
+	sdk.onRewardedAdReward += Kupit_Bronyu_ne_nastoyashaya;
+        sdk.onRewardedAdOpened += BonusOpen;
+        sdk.onRewardedAdClosed += BonusClose;
+        sdk.onRewardedAdError += SDKNull;
+        sdk.onInterstitialShown += SDKNull;
+        sdk.onInterstitialFailed += SDKNull;
+----------------------
+//--------------события, на который подписываемся для показа рекламы---------------------
+public void Kupit_Bronyu_ne_nastoyashaya(string parametr)
+    {
+
+	//название метода можно изменить.
+
+    }
+    //--------------события, на который подписываемся для показа рекламы---------------------
+    void BonusOpen(int i)
+    {
+	//здесь прописываем действия при открытии рекламы поверх игры, обычно это постановка на паузу
+    }
+    void BonusClose(int i)
+    {
+	//здесь прописываем действия при закрытии рекламы, обычно это снятие с паузы
+    }
+    void SDKNull(int i)
+    {
+
+    }
+    void SDKNull(string s)
+    {
+
+    }
+    void SDKNull()
+    {
+
+    }
+----------------------------
+показ незакрываемой рекламы
+sdk.ShowRewarded("O");
+-----------------------
+закрываемая реклама
+sdk.ShowInterstitial();
